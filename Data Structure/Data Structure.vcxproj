@@ -139,9 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="circular_queue.cpp" />
+    <ClCompile Include="queue.cpp" />
     <ClCompile Include="singly_linked_list.cpp" />
     <ClCompile Include="circular_linked_list.cpp" />
     <ClCompile Include="double_linked_list.cpp" />
+    <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

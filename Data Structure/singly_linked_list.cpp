@@ -8,7 +8,7 @@
 //
 //
 //// 헤드 노드 생성
-//Node* CreateSinglyLinkedList() {
+//Node* createSinglyLinkedList() {
 //	Node* head = (Node*)malloc(sizeof(Node));
 //	head->link = NULL;
 //	return head;
@@ -104,7 +104,7 @@
 //
 //
 //int main() {
-//	Node* head = CreateSinglyLinkedList();
+//	Node* head = createSinglyLinkedList();
 //	insertFirst(head, -10);
 //	insertLast(head, 10);
 //	insertLast(head, 20);

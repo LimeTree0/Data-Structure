@@ -30,7 +30,7 @@
 //	Node* newNode = (Node*)malloc(sizeof(Node));
 //	newNode->data = n;
 //
-//	newNode->link = listHead->firstNode->link;
+//	newNode->link = listHead->firstNode;
 //	listHead->firstNode = newNode;
 //	listHead->tail->link = newNode;
 //}
@@ -48,15 +48,26 @@
 ////리스트에서 노드 삭제
 //void deleteNode(ListHead* listHead, int n) {
 //
-//	Node* preNode = listHead->firstNode;
+//	Node* preNode = listHead->tail;
+//	Node* ptr = listHead->firstNode;
 //
-//	while (preNode->link->data != n && preNode != listHead->tail)
-//		preNode = preNode->link;
-//		
-//	if (preNode->link == listHead->tail)
+//	while (ptr->data != n) {
+//		if (ptr != listHead->tail) {
+//			printf_s("데이터가 없습니다.");
+//			return;
+//		}
+//		preNode = ptr;
+//		ptr = ptr->link;
+//	}
+//
+//	if (ptr == listHead->firstNode) {
+//		listHead->firstNode = ptr->link;
+//		listHead->tail->link = listHead->firstNode;
+//	}
+//
+//	if (ptr == listHead->tail)
 //		listHead->tail = preNode;
 //
-//	Node* ptr = preNode->link;
 //	preNode->link = ptr->link;
 //	free(ptr);
 //}
@@ -77,9 +88,10 @@
 //	
 //	ListHead* listHead = createCircularList(10);
 //	insertFirst(listHead, 20);
+//	insertFirst(listHead, 40);
 //	insertLast(listHead, 30);
 //	printList(listHead);
-//	deleteNode(listHead, 30);
+//	deleteNode(listHead, 40);
 //	printList(listHead);
 //
 //}

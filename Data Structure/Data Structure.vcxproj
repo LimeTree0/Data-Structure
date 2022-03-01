@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Binary_search_tree.cpp" />
     <ClCompile Include="binary_tree_array.cpp" />
     <ClCompile Include="circular_queue.cpp" />
     <ClCompile Include="queue.cpp" />
